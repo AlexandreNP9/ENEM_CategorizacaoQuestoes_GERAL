@@ -1,21 +1,21 @@
 # ENEM_CategorizacaoQuestoes_GERAL
 Repositório central do projeto de categorização das questões do ENEM
 
-1) Pré-tratamento das imagens:  
+1) Pré-tratamento das imagens: FINALIZADO  
 Deixar uma questão por imagem  
 https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_PreTratamento  
 
-2) Extração do Contéudo por OCR:  
+2) Extração do Contéudo por OCR: EM DESENVOLVIMENTO  
 API de OCR, imagem para .txt  
 https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_ExtracaoConteudo  
 
-3) Análise LLM:  
+3) Análise LLM: A DESENVOLVER  
 Análise da questão textual, gabarito e alternativas para construção de base de dados  
 https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_AnaliseLLM  
 
-4) Interface CRUD:  
+4) Interface CRUD: A DESENVOLVER  
 Interface pesquisável das questões por filtro  
-A CRIAR  
+https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_Interface  
 
 # O QUE É?
 Este projeto busca criar um banco de dados estruturado com questões do ENEM, categorizadas por:  

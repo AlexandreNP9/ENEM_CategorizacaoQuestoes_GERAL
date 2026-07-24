@@ -1,49 +1,33 @@
 # ENEM_CategorizacaoQuestoes_GERAL
-Repositório central do projeto de categorização das questões do ENEM
+Repositório central do projeto de categorização das questões do ENEM  
 
-1) Pré-tratamento das imagens: FINALIZADO  
-Deixar uma questão por imagem  
-https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_PreTratamento  
+O objetivo deste projeto é construir um banco de dados estruturado contendo as questões do ENEM, enriquecidas com metadados e classificações semânticas geradas por modelos de linguagem (LLMs), finalmente permitindo consultas por conteúdo, habilidade, ano e diversos outros critérios.  
+
+# ETAPAS
+1) Tratamento das imagens: FINALIZADO  
+A partir do caderno do ENEM em PDF, exportar para PNG e separar uma questão por imagem, com nome organizado  
+https://github.com/AlexandreNP9/TratamentoImagens_CategorizacaoQuestoesENEM  
 
 2) Extração do Contéudo por OCR: EM DESENVOLVIMENTO  
-API de OCR, imagem para .txt  
-https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_ExtracaoConteudo  
+A partir das imagens da fase anterior, utilizar API de OCR para extrair o texto e descrição de figuras das imagens das questões, tudo para .txt  
+https://github.com/AlexandreNP9/ExtracaoConteudo_CategorizacaoQuestoesENEM  
 
 3) Análise LLM: A DESENVOLVER  
-Análise da questão textual, gabarito e alternativas para construção de base de dados  
-https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_AnaliseLLM  
+Análise do .txt da fase anterior, feita por LLM, baseada na matriz de referência do exame e gabarito, resultando em um JSON por questão.  
+https://github.com/AlexandreNP9/AnaliseLLM_CategorizacaoQuestoesENEM  
 
-4) Interface CRUD: A DESENVOLVER  
+4) Banco de Dados: A DESENVOLVER  
+Alimentação do BD centralizado, a partir dos JSONs do passo anterior.  
+
+5) Interface CRUD: A DESENVOLVER  
 Interface pesquisável das questões por filtro  
-https://github.com/AlexandreNP9/ENEM_CategorizacaoQuestoes_Interface  
+https://github.com/AlexandreNP9/Interface_CategorizacaoQuestoesENEM  
 
-# O QUE É?
-Este projeto busca criar um banco de dados estruturado com questões do ENEM, categorizadas por:  
-Conteúdo da questão (descritor)  
-Habilidades avaliadas  
-Metadados (ano, caderno, etc.)  
-Gabarito e justificativa das alternativas
+# OUTROS
+Provas anteiores  
+https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos  
 
-Matriz disponível em https://download.inep.gov.br/download/enem/matriz_referencia.pdf
+Matriz do ENEM  
+https://download.inep.gov.br/download/enem/matriz_referencia.pdf  
 
 Futuramente, também pretendo associar os descritores e habilidades à BNCC.
-
-# COMO FUNCIONA?
-1. Pré-processamento das questões  
-Separação das imagens por questão.  
-Organização dos dados básicos.  
-
-2. Extração de texto  
-Uso da API do Google Lens para OCR (reconhecimento de caracteres).  
-
-3. Classificação semântica e banco de dados  
-Envio do enunciado e gabarito para uma LLM, identificando o conteúdo principal, habilidade associada, metadados e justificativas das altertanivas  
-
-4. Construção de interface  
-Possibilitando consultas como:  
-Todas as questões de Trigonometria  
-Todas as questões de História do Brasil  
-
-# STATUS DO PROJETO
-Semi-automático: diversos processos já foram automatizados via código, mas ainda existem etapas que precisam ser realizadas manualmente.  
-Em desenvolvimento 🚧  
